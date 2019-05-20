@@ -88,6 +88,41 @@ function RemoveStyle() {
 
 
 
+var allCards = document.querySelector(".btn.btn-sm.btn-success");
+
+var textCard = document.querySelector('.card-text');
+var imgCard = document.querySelector(".card-img-top");
+
+var changeSize = true;
+
+
+	allCards.addEventListener('mouseover', functionTest);
+
+
+
+function functionTest() {
+
+	if (changeSize == true) {
+	textCard.style.fontSize = "x-small";
+	imgCard.style.height = "60px";
+	imgCard.style.width = "80px";
+	changeSize = false;
+	}
+	else if (changeSize == false) {
+	textCard.style.fontSize = null;
+	imgCard.style.height = null;
+	imgCard.style.width = null ;
+	changeSize = true;
+
+	}
+
+};
+
+
+
+
+
+
 
 
 
