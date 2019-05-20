@@ -85,20 +85,12 @@ function RemoveStyle() {
 
 // Fonctionnalité 6
 
-
-
-
 var allCards = document.querySelector(".btn.btn-sm.btn-success");
-
 var textCard = document.querySelector('.card-text');
 var imgCard = document.querySelector(".card-img-top");
-
 var changeSize = true;
 
-
-	allCards.addEventListener('mouseover', functionTest);
-
-
+allCards.addEventListener('mouseover', functionTest);
 
 function functionTest() {
 
@@ -113,22 +105,42 @@ function functionTest() {
 	imgCard.style.height = null;
 	imgCard.style.width = null ;
 	changeSize = true;
-
 	}
-
 };
 
 
+// Fonctionnalité 7
+
+
+let allcards = document.getElementsByClassName("col-md-4");
+let parent = document.getElementsByClassName("row")[1];
+let bouton = document.querySelector("main").querySelectorAll("a")[1];
+
+bouton.addEventListener("click", changeIndexCard);
+function changeIndexCard(){
+let movingCard = allcards[allcards.length-1]
+parent.insertBefore(movingCard, allcards[0])
+}
+
+
+// Fonctionnalité 8
 
 
 
+let boutonBack = document.querySelector("main").querySelectorAll("a")[0];
+let linkBack = document.querySelector(".btn.btn-primary.my-2");
 
+linkBack.addEventListener("click", changeLink);
 
+function changeLink() {
+	linkBack.href = "#";
+}
 
-
-
-
-
+boutonBack.addEventListener("click", changeIndexCard);
+function changeIndexCard(){
+let movingCard = allcards[allcards.length-1]
+parent.insertBefore(movingCard, allcards[0])
+}
 
 
 
