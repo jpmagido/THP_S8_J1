@@ -1,11 +1,11 @@
 // Fonctionnalité 1 + 1 bis
 
 var footer = document.querySelector('footer');
-
+var countClick = 0;
 footer.addEventListener('click', function ClickOnFooter(){
-		var countClick = 0;
+		
 		countClick++
-		console.log(countClick);
+		console.log(`Clique n° ${countClick}`);
 
 	}
 );
